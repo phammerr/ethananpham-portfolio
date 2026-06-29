@@ -2,8 +2,7 @@ export const site = {
   name: "Ethan An Pham",
   handle: "ethananpham.com",
   location: "McLean, VA",
-  email: "you@example.com",
-  x: "https://x.com/yourhandle",
+  email: "ethananpham@gmail.com",
 }
 
 export const navItems = [

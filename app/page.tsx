@@ -44,15 +44,6 @@ export default function HomePage() {
             className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
           >
             email me
-          </Link>{" "}
-          or{" "}
-          <Link
-            href={site.x}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
-          >
-            find me on X
           </Link>
           .
         </p>
