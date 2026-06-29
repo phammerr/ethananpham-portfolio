@@ -19,7 +19,7 @@ export function PageShell({ title, meta, children }: PageShellProps) {
         </h1>
         <div className="mt-3 h-px w-10 bg-accent-warm" aria-hidden="true" />
         {meta ? (
-          <p className="mt-3 font-mono text-sm text-muted-foreground">
+          <p className="mt-3 whitespace-pre-line font-mono text-sm text-muted-foreground">
             {meta}
           </p>
         ) : null}

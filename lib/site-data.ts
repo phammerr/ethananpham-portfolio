@@ -9,7 +9,7 @@ export const site = {
 export const navItems = [
   { label: site.handle, href: "/" },
   { label: "resume", href: "/cv" },
-  { label: "media", href: "/books" },
+  { label: "shelf", href: "/books" },
   { label: "travel", href: "/travel" },
   { label: "hobbies", href: "/hobbies" },
 ]
