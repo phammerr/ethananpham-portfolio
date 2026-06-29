@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Geist_Mono, Newsreader } from 'next/font/google'
+import { Geist_Mono, Inter, Oswald, Special_Elite } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const geistMono = Geist_Mono({
@@ -8,11 +9,23 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-const newsreader = Newsreader({
-  variable: '--font-newsreader',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
-  style: ['normal', 'italic'],
 })
+
+const oswald = Oswald({
+  variable: '--font-oswald',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+})
+
+const specialElite = Special_Elite({
+  variable: '--font-special-elite',
+  subsets: ['latin'],
+  weight: '400',
+})
+
 
 export const metadata: Metadata = {
   title: 'Ethan An Pham',
@@ -50,9 +63,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${geistMono.variable} bg-background`}
+      className={`${oswald.variable} ${specialElite.variable} ${geistMono.variable} ${inter.variable} bg-background`}
     >
       <body className="font-serif antialiased">
+        {process.env.NODE_ENV === "development" && (
+          <Script
+            src="//unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

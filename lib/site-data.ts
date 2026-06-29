@@ -1,25 +1,22 @@
 export const site = {
   name: "Ethan An Pham",
-  handle: "yoursite.com",
-  location: "Brooklyn, NY",
+  handle: "ethananpham.com",
+  location: "McLean, VA",
   email: "you@example.com",
   x: "https://x.com/yourhandle",
 }
 
 export const navItems = [
   { label: site.handle, href: "/" },
-  { label: "cv", href: "/cv" },
-  { label: "books", href: "/books" },
-  { label: "posts", href: "/posts" },
-  { label: "lists", href: "/lists" },
+  { label: "resume", href: "/cv" },
+  { label: "media", href: "/books" },
+  { label: "travel", href: "/travel" },
+  { label: "hobbies", href: "/hobbies" },
 ]
 
 export const socialLinks = [
-  { label: "X", href: "https://x.com/yourhandle" },
-  { label: "linkedin", href: "https://linkedin.com/in/yourhandle" },
-  { label: "github", href: "https://github.com/yourhandle" },
-  { label: "instagram", href: "https://instagram.com/yourhandle" },
-  { label: "rss", href: "/rss.xml" },
+  { label: "linkedin", href: "https://linkedin.com/in/ethananpham" },
+  { label: "instagram", href: "https://instagram.com/ethan.fam" },
 ]
 
 export type Post = {

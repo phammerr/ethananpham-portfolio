@@ -13,11 +13,9 @@ export function SocialLinks() {
                 href={item.href}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground transition-colors hover:text-accent-warm"
               >
-                {"["}
                 {item.label}
-                {"]"}
               </Link>
             </li>
           )

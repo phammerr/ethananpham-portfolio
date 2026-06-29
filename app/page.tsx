@@ -5,18 +5,31 @@ import { site } from "@/lib/site-data"
 export default function HomePage() {
   return (
     <PageShell title={site.name} meta={`Currently in: ${site.location}`}>
-      <div className="space-y-5 text-lg leading-relaxed text-foreground/90">
-        <p>Hi, I&apos;m {site.name.split(" ")[0]}.</p>
-
+      <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
         <p>
-          I&apos;m interested in using technology to enable new forms of human
-          expression.
+          Hi, I&apos;m Ethan — a founder,
+          curator, and occasional data scientist based in the DC area.
         </p>
 
         <p>
-          This is a template starter for a personal website. Swap in your own
-          words here — a little about your background, what you care about, and
-          the kind of work you&apos;re drawn to. Keep it warm and specific.
+          I&apos;m drawn to the spaces where systems and human experience
+          overlap: the economics of vintage markets, the information design of a
+          well-made garment, the quiet decisions behind where someone travels
+          alone.
+        </p>
+
+        <p>
+          I built{" "}
+          <Link
+            href="/cv"
+            className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
+          >
+            Greenie &amp; College Park Flea
+          </Link>{" "}
+          from the ground up, scaling both to reach thousands of people across
+          DC, Maryland, and Virginia. Before that, I helped digitize
+          manufacturing workflows on a 500-person factory floor in Ho Chi Minh
+          City.
         </p>
 
         <p>
@@ -25,15 +38,10 @@ export default function HomePage() {
         </p>
 
         <p>
-          Feel free to poke around — this site is a sampling of what I&apos;m
-          currently reading, writing, and thinking about.
-        </p>
-
-        <p>
           If any of it interests you, feel free to{" "}
           <Link
             href={`mailto:${site.email}`}
-            className="underline underline-offset-4 transition-colors hover:text-foreground"
+            className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
           >
             email me
           </Link>{" "}
@@ -42,7 +50,7 @@ export default function HomePage() {
             href={site.x}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4 transition-colors hover:text-foreground"
+            className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
           >
             find me on X
           </Link>

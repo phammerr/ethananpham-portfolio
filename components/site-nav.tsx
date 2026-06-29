@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { navItems } from "@/lib/site-data"
 import { cn } from "@/lib/utils"
+import { FontPicker } from "@/components/font-picker"
 
 export function SiteNav() {
   const pathname = usePathname()
@@ -24,13 +25,11 @@ export function SiteNav() {
                 className={cn(
                   "inline-block px-1 transition-colors",
                   active
-                    ? "bg-accent text-accent-foreground"
-                    : "text-muted-foreground hover:text-foreground",
+                    ? "text-accent-warm"
+                    : "text-muted-foreground hover:text-accent-warm/80",
                 )}
               >
-                {"["}
                 {item.label}
-                {"]"}
               </Link>
             </li>
           )
