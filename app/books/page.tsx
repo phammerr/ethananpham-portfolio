@@ -31,8 +31,8 @@ const videos: VideoItem[] = [
     note: "What makes it worth watching",
   },
   {
-    title: "Video / Channel Title",
-    subtitle: "Creator",
+    title: "10000 Hours — Episode 2 Payoff",
+    subtitle: "IN THE LAB · Basketball Documentary",
     href: "https://www.youtube.com/watch?v=E7ctsRfbtBY&list=PLVocaCGI5NRkH6fwZ5fuXLcBD9FTY3JbZ&index=26",
     videoId: "E7ctsRfbtBY",
   },
@@ -99,7 +99,7 @@ function VideoSection({ heading, items }: { heading: string; items: VideoItem[] 
                   />
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <span className="text-base text-accent-warm group-hover:text-accent-warm/70 transition-colors underline underline-offset-4">
+                  <span className="text-base text-foreground transition-colors group-hover:text-accent-warm group-hover:underline underline-offset-4">
                     {item.title}
                   </span>
                   <span className="font-mono text-xs text-muted-foreground">{item.subtitle}</span>
