@@ -15,7 +15,7 @@ const newsreader = Newsreader({
 })
 
 export const metadata: Metadata = {
-  title: 'Your Name',
+  title: 'Ethan An Pham',
   description: 'A personal website — writing, reading, and thinking out loud.',
   generator: 'v0.app',
   icons: {
