@@ -124,4 +124,7 @@
   html {
     @apply font-sans;
   }
+  h1 {
+    font-family: var(--font-oswald), Impact, sans-serif;
+  }
 }
