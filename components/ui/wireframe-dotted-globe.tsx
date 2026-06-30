@@ -105,7 +105,7 @@ export default function RotatingEarth({
     let landFeatures: any
 
     // Store projected pin positions for hit testing
-    let projectedPins: { x: number; y: number; dest: GlobeDestination }[] = []
+    let projectedPins: { x: number; y: number; dest: GlobeDestination; hitR: number }[] = []
 
     const render = () => {
       context.clearRect(0, 0, containerWidth, containerHeight)
@@ -168,10 +168,9 @@ export default function RotatingEarth({
           if (Math.abs(normalizedLng) > 90) return
 
           const [px, py] = projected
-          projectedPins.push({ x: px, y: py, dest })
-
-          const pinR = 5 * scaleFactor
+          const pinR = 6.25 * scaleFactor
           const stemH = 12 * scaleFactor
+          projectedPins.push({ x: px, y: py - stemH - pinR, dest, hitR: pinR * 2 })
 
           // Drop shadow
           context.save()
@@ -276,11 +275,10 @@ export default function RotatingEarth({
       const rect = canvas.getBoundingClientRect()
       const mx = event.clientX - rect.left
       const my = event.clientY - rect.top
-      const HIT = 12
-
-      const hit = projectedPins.find(
-        (p) => Math.abs(p.x - mx) < HIT && Math.abs(p.y - my) < HIT
-      )
+      const hit = projectedPins.find((p) => {
+        const hitR = Math.max(p.hitR, 12)
+        return Math.abs(p.x - mx) < hitR && Math.abs(p.y - my) < hitR
+      })
 
       if (hit) {
         canvas.style.cursor = "pointer"

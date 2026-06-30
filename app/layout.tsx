@@ -1,8 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Geist_Mono, Inter, Oswald, Special_Elite } from 'next/font/google'
+import { Arvo, Geist_Mono, Inter, Oswald, Special_Elite } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
+
+const arvo = Arvo({
+  variable: '--font-arvo',
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
@@ -63,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${oswald.variable} ${specialElite.variable} ${geistMono.variable} ${inter.variable} bg-background`}
+      className={`${arvo.variable} ${oswald.variable} ${specialElite.variable} ${geistMono.variable} ${inter.variable} bg-background`}
     >
       <body className="font-serif antialiased">
         {process.env.NODE_ENV === "development" && (

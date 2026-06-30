@@ -4,7 +4,7 @@ import { galleryItems } from "@/lib/gallery-data"
 
 export default function HobbiesPage() {
   return (
-    <PageShell title="hobbies" meta='"A jack of all trades is a master of none, but oftentimes better than a master of one."'>
+    <PageShell title="Hobbies" meta='"A jack of all trades is a master of none, but oftentimes better than a master of one."'>
       <Gallery items={galleryItems} />
     </PageShell>
   )

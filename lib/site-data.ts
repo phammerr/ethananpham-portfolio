@@ -14,6 +14,7 @@ export const navItems = [
 ]
 
 export const socialLinks = [
+  { label: "email", href: `mailto:${site.email}` },
   { label: "linkedin", href: "https://linkedin.com/in/ethananpham" },
   { label: "instagram", href: "https://instagram.com/ethan.fam" },
 ]

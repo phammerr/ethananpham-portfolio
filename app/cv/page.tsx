@@ -12,14 +12,14 @@ const experience: Entry[] = [
   {
     period: "Jan 2022 — now",
     role: "Founder & CEO",
-    org: "Greenie & College Park Flea",
-    location: "College Park, MD",
+    org: "Greenie",
+    location: "Washington DC-Baltimore Area",
     bullets: [
-      "Launched and scaled a vintage clothing e-commerce and flash retail business generating over $100,000 in gross revenue, expanding to 2,500+ customers across DC, Maryland, and Virginia.",
-      "Managed 7,500+ item inventory while leveraging data analysis to forecast trends and streamline supply chain.",
-      "Grew a social media following of 3,000+ through targeted marketing campaigns and original graphic content.",
-      "Founded College Park Flea, hosting 100+ small business owners across multiple events and drawing thousands of community members while managing all vendor relations, logistics, and event operations.",
-      "Directed three marketing interns in campaign execution and day-to-day business operations.",
+      "Scaled a campus vintage operation into an established DMV brand with a presence across DC, Maryland, and Virginia.",
+      "Sold 5,000+ garments through farmers markets, university pop-ups, and e-commerce.",
+      "Hosted vintage markets at GMU and UMD, building a community of 100+ vendors and thousands of students.",
+      "Oversee all business functions including interns, inventory, supply chain, finances, and marketing.",
+      "2x Top 5 finalist at Pitch Dingman; featured on Big Ten Network and multiple university journals.",
     ],
   },
   {
@@ -28,9 +28,31 @@ const experience: Entry[] = [
     org: "UnAvailable Ltd.",
     location: "Ho Chi Minh City, Vietnam",
     bullets: [
-      "Analyzed financial data across Power BI dashboards to surface trends and benchmark performance across 14 brand accounts at a manufacturer supplying globally recognized streetwear brands.",
-      "Developed a client-facing manufacturing platform integrating fabric selection, costing, and communication portals.",
-      "Designed an original garment end-to-end, creating tech packs and directly overseeing production across textile assortment, treatments, and manufacturing on a 500-person factory floor.",
+      "Interned at a Vietnam-based apparel manufacturer producing for global streetwear brands including Stussy, Palace, Barbour, and Aimé Leon Dore.",
+      "Organized samples and tech packs for new brand onboarding, gaining exposure to client development.",
+      "Contributed to commercial operations for active accounts including order tracking and product approvals.",
+      "Produced a piece from concept to completion alongside factory floor teams.",
+    ],
+  },
+  {
+    period: "Jul 2025",
+    role: "Event Production Staff",
+    org: "MAN / WOMAN",
+    location: "New York, NY",
+    bullets: [
+      "Supported event setup, breakdown, and vendor check-in for a fashion industry trade show.",
+      "Assisted with on-site logistics to ensure a professional experience for vendors and attendees.",
+    ],
+  },
+  {
+    period: "Mar 2024 — May 2025",
+    role: "Founder & CEO",
+    org: "College Park Flea",
+    location: "College Park, MD",
+    bullets: [
+      "Founded a community-driven flea market hosting 100+ small business owners, drawing thousands of residents and students.",
+      "Managed all operations from vendor onboarding and marketing interns to logistics and day-of execution.",
+      "Created a welcoming third space centered around small business, community, and culture.",
     ],
   },
   {
@@ -39,48 +61,39 @@ const experience: Entry[] = [
     org: "srcLogic",
     location: "Vienna, VA",
     bullets: [
-      "Leveraged Pegasystems to improve business process operations and customer relationship management.",
-      "Built a workflow management framework that digitizes multi-level inspections, then aggregates results into analytical summaries for client organizations.",
-      "Generated 30% growth in user engagement through social media content creation and account management.",
+      "Applied Pega, Python, HTML, and JavaScript across multiple consulting projects.",
+      "Developed an inspection dashboard in Pega routing multi-stage approval workflows with role-based verification.",
+      "Earned Pega CSA and CSSA certifications.",
     ],
   },
   {
-    period: "Spring 2024",
-    role: "Integrative Capstone Project",
+    period: "Jan 2024 — May 2024",
+    role: "Undergraduate Teaching Assistant",
     org: "University of Maryland",
     location: "College Park, MD",
     bullets: [
-      "Led a comprehensive data analysis and visualization project focused on enhancing safety of pedestrians and bikers along Greenbelt Road.",
-      "Utilized ArcGIS to identify patterns and trends in county-level injuries and casualties to pinpoint safety concerns.",
+      "Served as TA for Asian American Psychology under Dr. Derek Iwamoto.",
+      "Lectured, led discussions, graded assignments, created rubrics, and managed student teams.",
     ],
   },
   {
-    period: "Spring 2024",
-    role: "INFO Challenge",
-    org: "University of Maryland",
-    location: "College Park, MD",
+    period: "May 2022 — Aug 2022",
+    role: "Assistant Event Coordinator",
+    org: "Euphoria Market",
+    location: "Arlington, VA",
     bullets: [
-      "Cleaned and analyzed USDA FoodData Central data using Python and Tableau, identifying nutrient density trends across food groups and summarizing key findings with an interactive website containing 15+ data visualizations.",
-      "Awarded 2nd in annual multi-university data analytics competition, presenting findings to a panel of industry judges.",
-    ],
-  },
-  {
-    period: "Spring 2024",
-    role: "Teaching Assistant",
-    org: "University of Maryland",
-    location: "College Park, MD",
-    bullets: [
-      "Mentored 100+ students as teaching assistant for Asian American Psychology course, leading discussions, delivering lectures, grading assignments, creating rubrics, and managing student teams.",
+      "Helped plan and run the DMV's largest vintage market, with 120+ vendors and 5,000+ biannual visitors.",
+      "Supported vendor coordination, logistics, and day-of event management.",
     ],
   },
   {
     period: "Jun 2020 — Jan 2022",
     role: "Sales Associate",
-    org: "Vans",
-    location: "Tysons, VA",
+    org: "Vans, a VF Company",
+    location: "Tysons Corner, VA",
     bullets: [
-      "Optimized floor sales, cashier operations, merchandise restocking, and customer satisfaction.",
-      'Achieved consistent monthly sales targets earning repeated "Sales Associate of the Month" recognition.',
+      "Sold merchandise, restocked apparel, and ensured customer satisfaction as cashier and sales associate.",
+      'Received "Sales Associate of the Month" recognition.',
     ],
   },
 ]
@@ -125,31 +138,28 @@ function Section({ heading, entries }: { heading: string; entries: Entry[] }) {
       </h2>
       <ul className="mt-4 space-y-8">
         {entries.map((e) => (
-          <li
-            key={`${e.org}-${e.period}`}
-            className="grid grid-cols-1 gap-1 md:grid-cols-[10rem_1fr] md:gap-6"
-          >
-            <span className="font-mono text-sm text-muted-foreground">
-              {e.period}
-            </span>
-            <div>
+          <li key={`${e.org}-${e.period}`}>
+            <div className="flex items-baseline justify-between gap-4">
               <p className="text-lg">
-                {e.role}
-                <span className="text-muted-foreground"> · {e.org}</span>
+                <span className="font-semibold">{e.org}</span>
+                {e.location && (
+                  <span className="ml-2 font-mono text-xs text-muted-foreground/70">
+                    {e.location}
+                  </span>
+                )}
               </p>
-              {e.location && (
-                <p className="font-mono text-xs text-muted-foreground/70 mt-0.5">
-                  {e.location}
-                </p>
-              )}
-              <ul className="mt-2 space-y-1 list-disc list-inside">
-                {e.bullets.map((b, i) => (
-                  <li key={i} className="leading-relaxed text-foreground/80 text-sm">
-                    {b}
-                  </li>
-                ))}
-              </ul>
+              <span className="shrink-0 font-mono text-sm text-muted-foreground">
+                {e.period}
+              </span>
             </div>
+            <p className="mt-0.5 text-foreground/90">{e.role}</p>
+            <ul className="mt-2 space-y-1 list-disc list-inside">
+              {e.bullets.map((b, i) => (
+                <li key={i} className="leading-relaxed text-foreground/80 text-sm">
+                  {b}
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
@@ -159,7 +169,7 @@ function Section({ heading, entries }: { heading: string; entries: Entry[] }) {
 
 export default function CvPage() {
   return (
-    <PageShell title="resume" meta="Ethan An Pham · McLean, VA · ethananpham@gmail.com">
+    <PageShell title="Resume" meta="Ethan An Pham · McLean, VA · ethananpham@gmail.com">
       <Section heading="Experience" entries={experience} />
       <Section heading="Education" entries={education} />
       <section className="mt-10">

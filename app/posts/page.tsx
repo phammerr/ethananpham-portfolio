@@ -12,7 +12,7 @@ function formatDate(date: string) {
 
 export default function PostsPage() {
   return (
-    <PageShell title="posts" meta="Essays, notes, and half-formed thoughts.">
+    <PageShell title="Posts" meta="Essays, notes, and half-formed thoughts.">
       <ul className="mt-2 divide-y divide-border">
         {posts.map((post) => (
           <li key={post.slug} className="py-5">

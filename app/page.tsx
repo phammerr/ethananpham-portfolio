@@ -7,45 +7,50 @@ export default function HomePage() {
     <PageShell title={site.name} meta={`Currently in: ${site.location}`}>
       <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
         <p>
-          Hi, I&apos;m Ethan — a founder,
-          curator, and occasional data scientist based in the DC area.
+          Hi I&apos;m Ethan, a founder, creative, and data analyst.
         </p>
 
         <p>
-          I&apos;m drawn to the spaces where systems and human experience
-          overlap: the economics of vintage markets, the information design of a
-          well-made garment, the quiet decisions behind where someone travels
-          alone.
+          I studied Data Science and minored in Technological
+          Entrepreneurship at the University of Maryland, College Park in
+          2024.
         </p>
 
         <p>
-          I built{" "}
+          For the past few years I&apos;ve been working on{" "}
           <Link
             href="/cv"
             className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
           >
-            Greenie &amp; College Park Flea
-          </Link>{" "}
-          from the ground up, scaling both to reach thousands of people across
-          DC, Maryland, and Virginia. Before that, I helped digitize
-          manufacturing workflows on a 500-person factory floor in Ho Chi Minh
-          City.
+            Greenie
+          </Link>
+          {" "}(&apos;22), a premium vintage clothing brand, and{" "}
+          <Link
+            href="/cv"
+            className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
+          >
+            College Park Flea
+          </Link>
+          {" "}(&apos;24&ndash;&apos;25), a market showcasing small businesses at my alma
+          mater. Everything I do comes from a passion to build real community
+          through technology.
         </p>
 
         <p>
-          Right now I&apos;m exploring how the tools we build quietly shape the
-          way we think, read, and make things.
+          In my free time I love to solo travel, play basketball, and go
+          hiking. My favorite food is sushi (personal best AYCE performance is
+          currently 63 pieces).
         </p>
 
         <p>
-          If any of it interests you, feel free to{" "}
+          Never a bad time to meet someone new. Drop a{" "}
           <Link
             href={`mailto:${site.email}`}
             className="text-accent-warm underline underline-offset-4 transition-colors hover:text-accent-warm/70"
           >
-            email me
+            message
           </Link>
-          .
+          {" "}anytime!
         </p>
       </div>
     </PageShell>

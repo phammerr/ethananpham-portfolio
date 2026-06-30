@@ -14,7 +14,7 @@ export function PageShell({ title, meta, children }: PageShellProps) {
       <SiteNav />
 
       <header className="mt-12 animate-fade-up">
-        <h1 className="font-heading text-3xl font-bold lowercase tracking-normal md:text-4xl">
+        <h1 className="font-mono text-3xl lowercase tracking-normal md:text-4xl">
           {title}
         </h1>
         <div className="mt-3 h-px w-10 bg-accent-warm" aria-hidden="true" />

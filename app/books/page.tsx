@@ -126,7 +126,7 @@ function VideoSection({ heading, items }: { heading: string; items: VideoItem[] 
 
 export default function MediaPage() {
   return (
-    <PageShell title="shelf" meta="My hall of fame media consumption.">
+    <PageShell title="Shelf" meta="My hall of fame media consumption.">
       <MediaSection heading="Books" items={books} />
       <MediaSection heading="Podcasts" items={podcasts} />
       <VideoSection heading="YouTube" items={videos} />

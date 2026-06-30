@@ -3,7 +3,7 @@ import { lists } from "@/lib/site-data"
 
 export default function ListsPage() {
   return (
-    <PageShell title="lists" meta="Running collections, updated as I go.">
+    <PageShell title="Lists" meta="Running collections, updated as I go.">
       <div className="mt-2 space-y-10">
         {lists.map((list) => (
           <section key={list.title}>
