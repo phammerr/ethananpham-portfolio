@@ -5,7 +5,7 @@ import { site } from "@/lib/site-data"
 export default function HomePage() {
   return (
     <PageShell title={site.name} meta={`Currently in: ${site.location}`}>
-      <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
+      <div className="space-y-6 leading-relaxed text-foreground/90" style={{ fontSize: '17px' }}>
         <p>
           Hi I&apos;m Ethan, a founder, creative, and data analyst.
         </p>

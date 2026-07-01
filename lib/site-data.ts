@@ -7,8 +7,8 @@ export const site = {
 
 export const navItems = [
   { label: site.handle, href: "/" },
-  { label: "resume", href: "/cv" },
-  { label: "shelf", href: "/books" },
+  { label: "cv", href: "/cv" },
+  { label: "shelf", href: "/shelf" },
   { label: "travel", href: "/travel" },
   { label: "hobbies", href: "/hobbies" },
 ]
