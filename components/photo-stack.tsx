@@ -61,7 +61,7 @@ export function PhotoStack({ photos }: { photos: TravelPhoto[] }) {
                 zIndex: stackIndex,
               }}
             >
-              <Image src={photo.src} alt={photo.location} fill sizes="420px" className="object-cover" priority={isTop} />
+              <Image src={photo.src} alt={photo.location} fill sizes="(max-width: 768px) 71vw, 420px" className="object-cover" priority={isTop} />
               {isTop && (
                 <div
                   onMouseEnter={() => setHovered(true)}
