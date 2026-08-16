@@ -27,11 +27,6 @@ const books: MediaItem[] = [
 
 const videos: VideoItem[] = [
   {
-    title: "Video / Channel Title",
-    subtitle: "Creator",
-    note: "What makes it worth watching",
-  },
-  {
     title: "10000 Hours — Episode 2 Payoff",
     subtitle: "IN THE LAB · Basketball Documentary",
     href: "https://www.youtube.com/watch?v=E7ctsRfbtBY&list=PLVocaCGI5NRkH6fwZ5fuXLcBD9FTY3JbZ&index=26",
@@ -54,8 +49,9 @@ const videos: VideoItem[] = [
 const movies: MediaItem[] = [
   { title: "The Lion King", subtitle: "Roger Allers, Rob Minkoff · 1994" },
   { title: "Finding Nemo", subtitle: "Andrew Stanton · 2003" },
-  { title: "Film Title", subtitle: "Director · Year", note: "Why it matters to you" },
-  { title: "Film Title", subtitle: "Director · Year" },
+  { title: "Iron Man", subtitle: "Jon Favreau · 2008" },
+  { title: "Green Book", subtitle: "Peter Farrelly · 2018" },
+  { title: "Uncut Gems", subtitle: "Safdie Brothers · 2019" },
 ]
 
 const games: GameItem[] = [
@@ -214,7 +210,7 @@ function GameSection({ heading, items }: { heading: string; items: GameItem[] })
 
 export default function MediaPage() {
   return (
-    <PageShell title="Shelf" meta="My hall of fame media.">
+    <PageShell title="Shelf" meta="My hall of fame media, in no particular order.">
       <MediaSection heading="Books" items={books} />
       <VideoSection heading="YouTube" items={videos} />
 <MediaSection heading="Movies" items={movies} />
