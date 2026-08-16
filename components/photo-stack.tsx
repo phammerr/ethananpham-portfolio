@@ -26,14 +26,13 @@ export function PhotoStack({ photos }: { photos: TravelPhoto[] }) {
     })
   }
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    e.preventDefault()
-    setHovered(true)
-  }
-
   const handleTouchEnd = (e: React.TouchEvent) => {
     e.preventDefault()
-    sendToBack()
+    if (hovered) {
+      sendToBack()
+    } else {
+      setHovered(true)
+    }
   }
 
   if (deck.length === 0) return null
@@ -45,7 +44,6 @@ export function PhotoStack({ photos }: { photos: TravelPhoto[] }) {
         className="relative cursor-pointer w-[75vw] max-w-[420px]"
         style={{ aspectRatio: "3/2", marginRight: "40px" }}
         onClick={sendToBack}
-        onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         {[...deck].reverse().map((photo, i) => {
@@ -94,7 +92,7 @@ export function PhotoStack({ photos }: { photos: TravelPhoto[] }) {
           )
         })}
       </div>
-      <p className="font-mono text-xs text-muted-foreground">hold to reveal · release to flip</p>
+      <p className="font-mono text-xs text-muted-foreground">tap to reveal · tap again to flip</p>
     </div>
   )
 }
