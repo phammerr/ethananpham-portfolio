@@ -77,13 +77,12 @@ export function PhotoStack({ photos }: { photos: TravelPhoto[] }) {
                     padding: "16px",
                     textAlign: "center",
                     backgroundColor: hovered ? "rgba(0,0,0,0.5)" : "transparent",
-                    transition: "background-color 0.2s ease",
                   }}
                 >
-                  <p style={{ fontFamily: "monospace", fontSize: "14px", color: "white", opacity: hovered ? 1 : 0, transition: "opacity 0.2s ease", margin: 0 }}>
+                  <p style={{ fontFamily: "monospace", fontSize: "14px", color: "white", opacity: hovered ? 1 : 0, margin: 0 }}>
                     {photo.location}
                   </p>
-                  <p style={{ fontFamily: "monospace", fontSize: "12px", color: "rgba(255,255,255,0.7)", opacity: hovered ? 1 : 0, transition: "opacity 0.2s ease", margin: 0 }}>
+                  <p style={{ fontFamily: "monospace", fontSize: "12px", color: "rgba(255,255,255,0.7)", opacity: hovered ? 1 : 0, margin: 0 }}>
                     {photo.date}
                   </p>
                 </div>
