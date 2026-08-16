@@ -19,7 +19,14 @@ export const destinations: Destination[] = [
   { name: "Bangkok, Thailand", coordinates: [100.5018, 13.7563], trips: [{ season: "Summer", year: 2024 }] },
   { name: "Koh Tao, Thailand", coordinates: [99.84, 10.0956], trips: [{ season: "Summer", year: 2024 }] },
   { name: "Chiang Mai, Thailand", coordinates: [98.9853, 18.7883], trips: [{ season: "Summer", year: 2024 }] },
-  { name: "London, United Kingdom", coordinates: [-0.1278, 51.5074], trips: [{ season: "Summer", year: 2024 }] },
+  {
+    name: "London, United Kingdom",
+    coordinates: [-0.1278, 51.5074],
+    trips: [
+      { season: "Summer", year: 2024 },
+      { season: "Summer", year: 2026 },
+    ],
+  },
   { name: "Amsterdam, Netherlands", coordinates: [4.9041, 52.3676], trips: [{ season: "Summer", year: 2024 }] },
   { name: "Manuel Antonio, Costa Rica", coordinates: [-84.1499, 9.3925], trips: [{ season: "Summer", year: 2024 }] },
   { name: "La Fortuna, Costa Rica", coordinates: [-84.6431, 10.4709], trips: [{ season: "Summer", year: 2024 }] },
@@ -63,6 +70,10 @@ export const destinations: Destination[] = [
   { name: "Chitwan, Nepal", coordinates: [84.4303, 27.5291], trips: [{ season: "Winter", year: 2026 }] },
   { name: "Himalayas, Nepal", coordinates: [86.925, 27.9881], trips: [{ season: "Winter", year: 2026 }] },
   { name: "Henderson, North Carolina", coordinates: [-78.4031, 36.3293], trips: [{ season: "Summer", year: 2026 }] },
+  { name: "Berlin, Germany", coordinates: [13.405, 52.52], trips: [{ season: "Summer", year: 2026 }] },
+  { name: "Winchester, United Kingdom", coordinates: [-1.308, 51.0632], trips: [{ season: "Summer", year: 2026 }] },
+  { name: "Oxford, United Kingdom", coordinates: [-1.2577, 51.752], trips: [{ season: "Summer", year: 2026 }] },
+  { name: "Barcelona, Spain", coordinates: [2.1734, 41.3851], trips: [{ season: "Summer", year: 2026 }] },
   { name: "McLean, Virginia", coordinates: [-77.1772, 38.9338], trips: [{ season: "Home" }] },
 ]
 

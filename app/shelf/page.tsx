@@ -19,10 +19,10 @@ type GameItem = MediaItem & {
 }
 
 const books: MediaItem[] = [
-  { title: "The Glass Bead Game", subtitle: "Hermann Hesse" },
-  { title: "Gödel, Escher, Bach", subtitle: "Douglas Hofstadter" },
-  { title: "The Order of Time", subtitle: "Carlo Rovelli" },
   { title: "The Subtle Art of Not Giving a F*ck", subtitle: "Mark Manson" },
+  { title: "Percy Jackson & the Olympians: The Lightning Thief", subtitle: "Rick Riordan" },
+  { title: "Greenlights", subtitle: "Matthew McConaughey" },
+  { title: "Wonder", subtitle: "R. J. Palacio" },
 ]
 
 const videos: VideoItem[] = [
@@ -37,14 +37,23 @@ const videos: VideoItem[] = [
     href: "https://www.youtube.com/watch?v=E7ctsRfbtBY&list=PLVocaCGI5NRkH6fwZ5fuXLcBD9FTY3JbZ&index=26",
     videoId: "E7ctsRfbtBY",
   },
-]
-
-const music: MediaItem[] = [
-  { title: "Album or Artist", subtitle: "Artist / Genre", note: "A note on why it sticks" },
-  { title: "Album or Artist", subtitle: "Artist / Genre" },
+  {
+    title: "Custom Rick and Morty Vans (feat. Bender)",
+    subtitle: "phammer · Custom Shoe Build",
+    href: "https://www.youtube.com/watch?v=Vz6IYGY9_No",
+    videoId: "Vz6IYGY9_No",
+  },
+  {
+    title: "How to be Ninja",
+    subtitle: "nigahiga",
+    href: "https://www.youtube.com/watch?v=JdLCEwEFCMU",
+    videoId: "JdLCEwEFCMU",
+  },
 ]
 
 const movies: MediaItem[] = [
+  { title: "The Lion King", subtitle: "Roger Allers, Rob Minkoff · 1994" },
+  { title: "Finding Nemo", subtitle: "Andrew Stanton · 2003" },
   { title: "Film Title", subtitle: "Director · Year", note: "Why it matters to you" },
   { title: "Film Title", subtitle: "Director · Year" },
 ]
@@ -208,8 +217,7 @@ export default function MediaPage() {
     <PageShell title="Shelf" meta="My hall of fame media.">
       <MediaSection heading="Books" items={books} />
       <VideoSection heading="YouTube" items={videos} />
-      <MediaSection heading="Music" items={music} />
-      <MediaSection heading="Movies" items={movies} />
+<MediaSection heading="Movies" items={movies} />
       <GameSection heading="Video Games" items={games} />
     </PageShell>
   )

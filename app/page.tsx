@@ -6,16 +6,19 @@ import { site } from "@/lib/site-data"
 export default function HomePage() {
   return (
     <PageShell title={site.name} meta={`Currently in: ${site.location}`}>
-      <div className="flex gap-0 items-start">
-        <div className="w-[420px] shrink-0 space-y-6 leading-relaxed text-foreground/90" style={{ fontSize: '17px' }}>
+      <div className="flex flex-col gap-0 md:flex-row md:items-start">
+        <div
+          className="space-y-6 leading-relaxed text-foreground/90 md:w-[420px] md:shrink-0"
+          style={{ fontSize: '17px' }}
+        >
           <p>
             Hi I&apos;m Ethan, a founder, creative, and data analyst.
           </p>
 
           <p>
-            I studied Information Science and minored in<br />
-            Technological Entrepreneurship &amp; Corporate Innovation<br />
-            at the University of Maryland, College Park in 2024.
+            I studied Information Science and minored in<br className="hidden md:block" />
+            {" "}Technological Entrepreneurship &amp; Corporate Innovation<br className="hidden md:block" />
+            {" "}at the University of Maryland, College Park in 2024.
           </p>
 
           <p>
@@ -35,7 +38,7 @@ export default function HomePage() {
             </Link>
             {" "}(&apos;24&ndash;&apos;25), a market showcasing small businesses at my alma
             mater. Everything I do comes from a passion to build real community
-            through technology.
+            through shared experiences.
           </p>
 
           <p>
@@ -56,7 +59,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="shrink-0 mt-4 ml-2">
+        <div className="mt-12 ml-6 shrink-0 md:mt-4 md:ml-2">
           <Image
             src="/mepfp2.png"
             alt="Ethan An Pham"

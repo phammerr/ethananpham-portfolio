@@ -137,7 +137,7 @@ function Section({ heading, entries }: { heading: string; entries: Entry[] }) {
 
 export default function CvPage() {
   return (
-    <PageShell title="cv" meta="Ethan An Pham · McLean, VA · ethananpham@gmail.com">
+    <PageShell title="cv" meta="Ethan An Pham · New York, NY · ethananpham@gmail.com">
       <Section heading="Experience" entries={experience} />
       <Section heading="Education" entries={education} />
       <section className="mt-10 first:mt-0">

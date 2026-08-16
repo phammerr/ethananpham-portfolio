@@ -1,7 +1,7 @@
 export const site = {
   name: "Ethan An Pham",
   handle: "ethananpham.com",
-  location: "McLean, VA",
+  location: "New York, NY",
   email: "ethananpham@gmail.com",
 }
 
