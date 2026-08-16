@@ -39,7 +39,7 @@ export function PhotoStack({ photos }: { photos: TravelPhoto[] }) {
 
   return (
     <div className="mt-10 flex flex-col items-center gap-6">
-      <p className="font-mono text-xs tracking-widest text-muted-foreground">A Few Fun Pics &amp; Fun Facts</p>
+      <p className="font-mono text-xs tracking-widest text-muted-foreground">Some Fun Pics &amp; Fun Facts</p>
       <div
         className="relative cursor-pointer w-[71vw] max-w-[420px]"
         style={{ aspectRatio: "3/2", marginRight: "40px" }}
