@@ -10,7 +10,6 @@ export const navItems = [
   { label: "cv", href: "/cv" },
   { label: "shelf", href: "/shelf" },
   { label: "travel", href: "/travel" },
-  { label: "hobbies", href: "/hobbies" },
 ]
 
 export const socialLinks = [
